@@ -1737,7 +1737,7 @@
   
 ## 质量规范Vue
 
-* **使用单文件组件(single-file-components)**
+* **使用单文件组件 (single-file-components)**
 
 ```html
 <template>
@@ -1767,7 +1767,7 @@ export default {
 <foo />
 ```
 
-* **模板内组件名和属性使用短横线风格(((kebab-case)**
+* **模板内组件名和属性使用短横线风格 (kebab-case)**
 
 ```html
 <!-- Bad -->
