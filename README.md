@@ -7,7 +7,7 @@
 
 ## 格式规范
 
-* **使用两个空格**进行缩进。
+* **使用两个空格**进行缩进
 
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
@@ -17,7 +17,7 @@
   }
   ```
 
-* 除需要转义的情况外，**字符串统一使用单引号**。
+* 除需要转义的情况外，**字符串统一使用单引号**
 
   eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
 
@@ -26,7 +26,7 @@
   $("<div class='box'>")
   ```
 
-* **不要定义未使用的变量**。
+* **不要定义未使用的变量**
 
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
@@ -36,7 +36,7 @@
   }
   ```
 
-* **关键字后面加空格**。
+* **关键字后面加空格**
 
   eslint: [`keyword-spacing`](http://eslint.org/docs/rules/keyword-spacing)
 
@@ -45,7 +45,7 @@
   if(condition) { ... }    // ✗ avoid
   ```
 
-* **命名函数声明时括号与函数名间不加空格**。
+* **命名函数声明时括号与函数名间不加空格**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
 
@@ -57,8 +57,8 @@
   run(function() { ... })       // ✗ avoid
   ```
 
-* **始终使用** `===` 替代 `==`。<br>
-  例外： `obj == null` 可以用来检查 `null || undefined`。
+* **始终使用** `===` 替代 `==`<br>
+  例外： `obj == null` 可以用来检查 `null || undefined`
 
   eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
 
@@ -72,7 +72,7 @@
   if (name != 'John')    // ✗ avoid
   ```
 
-* **字符串拼接操作符 (Infix operators)** 之间要留空格。
+* **字符串拼接操作符 (Infix operators)** 之间要留空格
 
   eslint: [`space-infix-ops`](http://eslint.org/docs/rules/space-infix-ops)
 
@@ -88,7 +88,7 @@
   var message = 'hello, '+name+'!'
   ```
 
-* **逗号后面加空格**。
+* **逗号后面加空格**
 
   eslint: [`comma-spacing`](http://eslint.org/docs/rules/comma-spacing)
 
@@ -104,7 +104,7 @@
   function greet (name,options) { ... }
   ```
 
-* **else 关键字要与花括号**保持在同一行。
+* **else 关键字要与花括号**保持在同一行
 
   eslint: [`brace-style`](http://eslint.org/docs/rules/brace-style)
 
@@ -127,7 +127,7 @@
   }
   ```
 
-* **多行 if 语句的**的括号不能省。
+* **多行 if 语句的**的括号不能省
 
   eslint: [`curly`](http://eslint.org/docs/rules/curly)
 
@@ -149,7 +149,7 @@
     console.log('done')
   ```
 
-* **不要丢掉**异常处理中`err`参数。
+* **不要丢掉**异常处理中`err`参数
 
   eslint: [`handle-callback-err`](http://eslint.org/docs/rules/handle-callback-err)
   ```js
@@ -167,7 +167,7 @@
   })
   ```
 
-* **使用浏览器全局变量时加上** `window.` 前缀。<br>
+* **使用浏览器全局变量时加上** `window.` 前缀<br>
   Exceptions are: `document`, `console` and `navigator`.
 
   eslint: [`no-undef`](http://eslint.org/docs/rules/no-undef)
@@ -176,7 +176,7 @@
   window.alert('hi')   // ✓ ok
   ```
 
-* **不允许有连续多行空行**。
+* **不允许有连续多行空行**
 
   eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
 
@@ -212,7 +212,7 @@
     'www.api.com'
   ```
 
-* **每个 var 关键字**单独声明一个变量。
+* **每个 var 关键字**单独声明一个变量
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
 
@@ -229,7 +229,7 @@
       verbose = true
   ```
 
-* **条件语句中赋值语句**使用括号包起来。这样使得代码更加清晰可读，而不会认为是将条件判断语句的全等号（`===`）错写成了等号（`=`）。
+* **条件语句中赋值语句**使用括号包起来这样使得代码更加清晰可读，而不会认为是将条件判断语句的全等号（`===`）错写成了等号（`=`）
 
   eslint: [`no-cond-assign`](http://eslint.org/docs/rules/no-cond-assign)
 
@@ -245,7 +245,7 @@
   }
   ```
 
-* **单行代码块两边加空格**。
+* **单行代码块两边加空格**
 
   eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
 
@@ -254,7 +254,7 @@
     function foo () { return true }  // ✓ ok
   ```
 
-* **对于变量和函数名统一使用驼峰命名法**。
+* **对于变量和函数名统一使用驼峰命名法**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
@@ -266,7 +266,7 @@
     var myVar = 'hello'            // ✓ ok
   ```
 
-* **必须有行末逗号**。
+* **必须有行末逗号**
 
   eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
 
@@ -276,7 +276,7 @@
     }
   ```
 
-* **始终将逗号置于行末**。
+* **始终将逗号置于行末**
 
   eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
 
@@ -292,7 +292,7 @@
     }
   ```
 
-* **点号操作符须与属性需在同一行**。
+* **点号操作符须与属性需在同一行**
 
   eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
 
@@ -304,11 +304,11 @@
       .log('hello') // ✓ ok
   ```
 
-* **文件末尾留一空行**。
+* **文件末尾留一空行**
 
   elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
 
-* **函数调用时标识符与括号间不留间隔**。
+* **函数调用时标识符与括号间不留间隔**
 
   eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
 
@@ -317,7 +317,7 @@
   console.log('hello')  // ✓ ok
   ```
 
-* **键值对当中冒号与值之间要留空白**。
+* **键值对当中冒号与值之间要留空白**
 
   eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
 
@@ -328,7 +328,7 @@
   var obj = { 'key': 'value' }     // ✓ ok
   ```
 
-* **构造函数要以大写字母开头**。
+* **构造函数要以大写字母开头**
 
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
@@ -340,7 +340,7 @@
   var dog = new Animal()    // ✓ ok
   ```
 
-* **无参的构造函数调用时要带上括号**。
+* **无参的构造函数调用时要带上括号**
 
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
@@ -350,7 +350,7 @@
   var dog = new Animal()  // ✓ ok
   ```
 
-* **对象中定义了存值器，一定要对应的定义取值器**。
+* **对象中定义了存值器，一定要对应的定义取值器**
 
   eslint: [`accessor-pairs`](http://eslint.org/docs/rules/accessor-pairs)
 
@@ -389,7 +389,7 @@
   }
   ```
 
-* **使用数组字面量而不是构造器**。
+* **使用数组字面量而不是构造器**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -398,7 +398,7 @@
   var nums = [1, 2, 3]            // ✓ ok
   ```
 
-* **避免使用 `arguments.callee` 和 `arguments.caller`**。
+* **避免使用 `arguments.callee` 和 `arguments.caller`**
 
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
@@ -416,7 +416,7 @@
   }
   ```
 
-* **避免对类名重新赋值**。
+* **避免对类名重新赋值**
 
   eslint: [`no-class-assign`](http://eslint.org/docs/rules/no-class-assign)
 
@@ -425,7 +425,7 @@
   Dog = 'Fido'    // ✗ avoid
   ```
 
-* **避免修改使用 `const` 声明的变量**。
+* **避免修改使用 `const` 声明的变量**
 
   eslint: [`no-const-assign`](http://eslint.org/docs/rules/no-const-assign)
 
@@ -434,7 +434,7 @@
   score = 125       // ✗ avoid
   ```
 
-* **避免使用常量作为条件表达式的条件（循环语句除外）**。
+* **避免使用常量作为条件表达式的条件（循环语句除外）**
 
   eslint: [`no-constant-condition`](http://eslint.org/docs/rules/no-constant-condition)
 
@@ -452,7 +452,7 @@
   }
   ```
 
-* **正则中不要使用控制符**。
+* **正则中不要使用控制符**
 
   eslint: [`no-control-regex`](http://eslint.org/docs/rules/no-control-regex)
 
@@ -461,7 +461,7 @@
   var pattern = /\x20/    // ✓ ok
   ```
 
-* **不要使用 `debugger`**。
+* **不要使用 `debugger`**
 
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
@@ -472,7 +472,7 @@
   }
   ```
 
-* **不要对变量使用 `delete` 操作**。
+* **不要对变量使用 `delete` 操作**
 
   eslint: [`no-delete-var`](http://eslint.org/docs/rules/no-delete-var)
 
@@ -481,7 +481,7 @@
   delete name     // ✗ avoid
   ```
 
-* **不要定义冗余的函数参数**。
+* **不要定义冗余的函数参数**
 
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
@@ -495,7 +495,7 @@
   }
   ```
 
-* **类中不要定义冗余的属性**。
+* **类中不要定义冗余的属性**
 
   eslint: [`no-dupe-class-members`](http://eslint.org/docs/rules/no-dupe-class-members)
 
@@ -506,7 +506,7 @@
   }
   ```
 
-* **对象字面量中不要定义重复的属性**。
+* **对象字面量中不要定义重复的属性**
 
   eslint: [`no-dupe-keys`](http://eslint.org/docs/rules/no-dupe-keys)
 
@@ -517,7 +517,7 @@
   }
   ```
 
-* **`switch` 语句中不要定义重复的 `case` 分支**。
+* **`switch` 语句中不要定义重复的 `case` 分支**
 
   eslint: [`no-duplicate-case`](http://eslint.org/docs/rules/no-duplicate-case)
 
@@ -529,7 +529,7 @@
   }
   ```
 
-* **同一模块有多个导入时一次性写完**。
+* **同一模块有多个导入时一次性写完**
 
   eslint: [`no-duplicate-imports`](http://eslint.org/docs/rules/no-duplicate-imports)
 
@@ -540,7 +540,7 @@
   import { myFunc1, myFunc2 } from 'module' // ✓ ok
   ```
 
-* **正则中不要使用空字符**。
+* **正则中不要使用空字符**
 
   eslint: [`no-empty-character-class`](http://eslint.org/docs/rules/no-empty-character-class)
 
@@ -549,7 +549,7 @@
   const myRegex = /^abc[a-z]/   // ✓ ok
   ```
 
-* **不要解构空值**。
+* **不要解构空值**
 
   eslint: [`no-empty-pattern`](http://eslint.org/docs/rules/no-empty-pattern)
 
@@ -558,7 +558,7 @@
   const { a: { b } } = foo      // ✓ ok
   ```
 
-* **不要使用 `eval()`**。
+* **不要使用 `eval()`**
 
   eslint: [`no-eval`](http://eslint.org/docs/rules/no-eval)
 
@@ -567,7 +567,7 @@
   var result = user[propName]             // ✓ ok
   ```
 
-* **`catch` 中不要对错误重新赋值**。
+* **`catch` 中不要对错误重新赋值**
 
   eslint: [`no-ex-assign`](http://eslint.org/docs/rules/no-ex-assign)
 
@@ -585,7 +585,7 @@
   }
   ```
 
-* **不要扩展原生对象**。
+* **不要扩展原生对象**
 
   eslint: [`no-extend-native`](http://eslint.org/docs/rules/no-extend-native)
 
@@ -593,7 +593,7 @@
   Object.prototype.age = 21     // ✗ avoid
   ```
 
-* **避免多余的函数上下文绑定**。
+* **避免多余的函数上下文绑定**
 
   eslint: [`no-extra-bind`](http://eslint.org/docs/rules/no-extra-bind)
 
@@ -607,7 +607,7 @@
   }.bind(user)    // ✓ ok
   ```
 
-* **避免不必要的布尔转换**。
+* **避免不必要的布尔转换**
 
   eslint: [`no-extra-boolean-cast`](http://eslint.org/docs/rules/no-extra-boolean-cast)
 
@@ -623,7 +623,7 @@
   }
   ```
 
-* **不要使用多余的括号包裹函数**。
+* **不要使用多余的括号包裹函数**
 
   eslint: [`no-extra-parens`](http://eslint.org/docs/rules/no-extra-parens)
 
@@ -632,7 +632,7 @@
   const myFunc = function () { }     // ✓ ok
   ```
 
-* **`switch` 一定要使用 `break` 来将条件分支正常中断**。
+* **`switch` 一定要使用 `break` 来将条件分支正常中断**
 
   eslint: [`no-fallthrough`](http://eslint.org/docs/rules/no-fallthrough)
 
@@ -661,7 +661,7 @@
   }
   ```
 
-* **不要省去小数点前面的0**。
+* **不要省去小数点前面的0**
 
   eslint: [`no-floating-decimal`](http://eslint.org/docs/rules/no-floating-decimal)
 
@@ -670,7 +670,7 @@
   const discount = 0.5     // ✓ ok
   ```
 
-* **避免对声明过的函数重新赋值**。
+* **避免对声明过的函数重新赋值**
 
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
@@ -679,7 +679,7 @@
   myFunc = myOtherFunc    // ✗ avoid
   ```
 
-* **不要对全局只读对象重新赋值**。
+* **不要对全局只读对象重新赋值**
 
   eslint: [`no-global-assign`](http://eslint.org/docs/rules/no-global-assign)
 
@@ -687,7 +687,7 @@
   window = {}     // ✗ avoid
   ```
 
-* **注意隐式的 `eval()`**。
+* **注意隐式的 `eval()`**
 
   eslint: [`no-implied-eval`](http://eslint.org/docs/rules/no-implied-eval)
 
@@ -696,7 +696,7 @@
   setTimeout(function () { alert('Hello world') })     // ✓ ok
   ```
 
-* **嵌套的代码块中禁止再定义函数**。
+* **嵌套的代码块中禁止再定义函数**
 
   eslint: [`no-inner-declarations`](http://eslint.org/docs/rules/no-inner-declarations)
 
@@ -706,7 +706,7 @@
   }
   ```
 
-* **不要向 `RegExp` 构造器传入非法的正则表达式**。
+* **不要向 `RegExp` 构造器传入非法的正则表达式**
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -715,7 +715,7 @@
   RegExp('[a-z]')   // ✓ ok
   ```
 
-* **不要使用非法的空白符**。
+* **不要使用非法的空白符**
 
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
@@ -723,7 +723,7 @@
   function myFunc () /*<NBSP>*/{}   // ✗ avoid
   ```
 
-* **禁止使用 `__iterator__`**。
+* **禁止使用 `__iterator__`**
 
   eslint: [`no-iterator`](http://eslint.org/docs/rules/no-iterator)
 
@@ -731,7 +731,7 @@
   Foo.prototype.__iterator__ = function () {}   // ✗ avoid
   ```
 
-* **外部变量不要与对象属性重名**。
+* **外部变量不要与对象属性重名**
 
   eslint: [`no-label-var`](http://eslint.org/docs/rules/no-label-var)
 
@@ -742,7 +742,7 @@
   }
   ```
 
-* **不要使用标签语句**。
+* **不要使用标签语句**
 
   eslint: [`no-labels`](http://eslint.org/docs/rules/no-labels)
 
@@ -753,7 +753,7 @@
     }
   ```
 
-* **不要书写不必要的嵌套代码块**。
+* **不要书写不必要的嵌套代码块**
 
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
@@ -769,11 +769,11 @@
   }
   ```
 
-* **不要混合使用空格与制表符作为缩进**。
+* **不要混合使用空格与制表符作为缩进**
 
   eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
 
-* **除了缩进，不要使用多个空格**。
+* **除了缩进，不要使用多个空格**
 
   eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
 
@@ -782,7 +782,7 @@
   const id = 1234       // ✓ ok
   ```
 
-* **不要使用多行字符串**。
+* **不要使用多行字符串**
 
   eslint: [`no-multi-str`](http://eslint.org/docs/rules/no-multi-str)
 
@@ -791,7 +791,7 @@
                    world'     // ✗ avoid
   ```
 
-* **`new` 创建对象实例后需要赋值给变量**。
+* **`new` 创建对象实例后需要赋值给变量**
 
   eslint: [`no-new`](http://eslint.org/docs/rules/no-new)
 
@@ -800,7 +800,7 @@
   const character = new Character()   // ✓ ok
   ```
 
-* **禁止使用 `Function` 构造器**。
+* **禁止使用 `Function` 构造器**
 
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
@@ -808,7 +808,7 @@
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
   ```
 
-* **禁止使用 `Object` 构造器**。
+* **禁止使用 `Object` 构造器**
 
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
@@ -816,7 +816,7 @@
   let config = new Object()   // ✗ avoid
   ```
 
-* **禁止使用 `new require`**。
+* **禁止使用 `new require`**
 
   eslint: [`no-new-require`](http://eslint.org/docs/rules/no-new-require)
 
@@ -824,7 +824,7 @@
   const myModule = new require('my-module')    // ✗ avoid
   ```
 
-* **禁止使用 `Symbol` 构造器**。
+* **禁止使用 `Symbol` 构造器**
 
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
@@ -832,7 +832,7 @@
   const foo = new Symbol('foo')   // ✗ avoid
   ```
 
-* **禁止使用原始包装器**。
+* **禁止使用原始包装器**
 
   eslint: [`no-new-wrappers`](http://eslint.org/docs/rules/no-new-wrappers)
 
@@ -840,7 +840,7 @@
   const message = new String('hello')   // ✗ avoid
   ```
 
-* **不要将全局对象的属性作为函数调用**。
+* **不要将全局对象的属性作为函数调用**
 
   eslint: [`no-obj-calls`](http://eslint.org/docs/rules/no-obj-calls)
 
@@ -848,7 +848,7 @@
   const math = Math()   // ✗ avoid
   ```
 
-* **不要使用八进制字面量**。
+* **不要使用八进制字面量**
 
   eslint: [`no-octal`](http://eslint.org/docs/rules/no-octal)
 
@@ -857,7 +857,7 @@
   const num = '042'   // ✓ ok
   ```
 
-* **字符串字面量中也不要使用八进制转义字符**。
+* **字符串字面量中也不要使用八进制转义字符**
 
   eslint: [`no-octal-escape`](http://eslint.org/docs/rules/no-octal-escape)
 
@@ -865,7 +865,7 @@
   const copyright = 'Copyright \251'  // ✗ avoid
   ```
 
-* **使用 `__dirname` 和 `__filename` 时尽量避免使用字符串拼接**。
+* **使用 `__dirname` 和 `__filename` 时尽量避免使用字符串拼接**
 
   eslint: [`no-path-concat`](http://eslint.org/docs/rules/no-path-concat)
 
@@ -874,7 +874,7 @@
   const pathToFile = path.join(__dirname, 'app.js')   // ✓ ok
   ```
 
-* 使用 `getPrototypeOf` 来替代 **`__proto__`**。
+* 使用 `getPrototypeOf` 来替代 **`__proto__`**
 
   eslint: [`no-proto`](http://eslint.org/docs/rules/no-proto)
 
@@ -883,7 +883,7 @@
   const foo = Object.getPrototypeOf(obj)  // ✓ ok
   ```
 
-* **不要重复声明变量**。
+* **不要重复声明变量**
 
   eslint: [`no-redeclare`](http://eslint.org/docs/rules/no-redeclare)
 
@@ -895,7 +895,7 @@
   name = 'Jane'         // ✓ ok
   ```
 
-* **正则中避免使用多个空格**。
+* **正则中避免使用多个空格**
 
   eslint: [`no-regex-spaces`](http://eslint.org/docs/rules/no-regex-spaces)
 
@@ -906,7 +906,7 @@
   const regexp = /test value/     // ✓ ok
   ```
 
-* **return 语句中的赋值必需有括号包裹**。
+* **return 语句中的赋值必需有括号包裹**
 
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
@@ -920,7 +920,7 @@
   }
   ```
 
-* **避免将变量赋值给自己**。
+* **避免将变量赋值给自己**
 
   eslint: [`no-self-assign`](http://eslint.org/docs/rules/no-self-assign)
 
@@ -928,7 +928,7 @@
   name = name   // ✗ avoid
   ```
 
-* **避免将变量与自己进行比较操作**。
+* **避免将变量与自己进行比较操作**
 
   esint: [`no-self-compare`](http://eslint.org/docs/rules/no-self-compare)
 
@@ -936,7 +936,7 @@
   if (score === score) {}   // ✗ avoid
   ```
 
-* **避免使用逗号操作符**。
+* **避免使用逗号操作符**
 
   eslint: [`no-sequences`](http://eslint.org/docs/rules/no-sequences)
 
@@ -944,7 +944,7 @@
   if (doSomething(), !!test) {}   // ✗ avoid
   ```
 
-* **不要随意更改关键字的值**。
+* **不要随意更改关键字的值**
 
   eslint: [`no-shadow-restricted-names`](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
@@ -952,7 +952,7 @@
   let undefined = 'value'     // ✗ avoid
   ```
 
-* **禁止使用稀疏数组（Sparse arrays）**。
+* **禁止使用稀疏数组（Sparse arrays）**
 
   eslint: [`no-sparse-arrays`](http://eslint.org/docs/rules/no-sparse-arrays)
 
@@ -960,11 +960,11 @@
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **不要使用制表符**。
+* **不要使用制表符**
 
   eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
 
-* **正确使用 ES6 中的字符串模板**。
+* **正确使用 ES6 中的字符串模板**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
 
@@ -973,7 +973,7 @@
   const message = `Hello ${name}`   // ✓ ok
   ```
 
-* **使用 `this` 前请确保 `super()` 已调用**。
+* **使用 `this` 前请确保 `super()` 已调用**
 
   eslint: [`no-this-before-super`](http://eslint.org/docs/rules/no-this-before-super)
 
@@ -986,7 +986,7 @@
   }
   ```
 
-* **用 `throw` 抛错时，抛出 `Error` 对象而不是字符串**。
+* **用 `throw` 抛错时，抛出 `Error` 对象而不是字符串**
 
   eslint: [`no-throw-literal`](http://eslint.org/docs/rules/no-throw-literal)
 
@@ -995,11 +995,11 @@
   throw new Error('error')    // ✓ ok
   ```
 
-* **行末不留空格**。
+* **行末不留空格**
 
   eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
 
-* **不要使用 `undefined` 来初始化变量**。
+* **不要使用 `undefined` 来初始化变量**
 
   eslint: [`no-undef-init`](http://eslint.org/docs/rules/no-undef-init)
 
@@ -1010,7 +1010,7 @@
   name = 'value'          // ✓ ok
   ```
 
-* **循环语句中注意更新循环变量**。
+* **循环语句中注意更新循环变量**
 
   eslint: [`no-unmodified-loop-condition`](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
@@ -1019,7 +1019,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **如果有更好的实现，尽量不要使用三元表达式**。
+* **如果有更好的实现，尽量不要使用三元表达式**
 
   eslint: [`no-unneeded-ternary`](http://eslint.org/docs/rules/no-unneeded-ternary)
 
@@ -1028,7 +1028,7 @@
   let score = val || 0          // ✓ ok
   ```
 
-* **`return`，`throw`，`continue` 和 `break` 后不要再跟代码**。
+* **`return`，`throw`，`continue` 和 `break` 后不要再跟代码**
 
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
@@ -1039,7 +1039,7 @@
   }
   ```
 
-* **`finally` 代码块中不要再改变程序执行流程**。
+* **`finally` 代码块中不要再改变程序执行流程**
 
   eslint: [`no-unsafe-finally`](http://eslint.org/docs/rules/no-unsafe-finally)
 
@@ -1053,7 +1053,7 @@
   }
   ```
 
-* **关系运算符的左值不要做取反操作**。
+* **关系运算符的左值不要做取反操作**
 
   eslint: [`no-unsafe-negation`](http://eslint.org/docs/rules/no-unsafe-negation)
 
@@ -1061,7 +1061,7 @@
   if (!key in obj) {}       // ✗ avoid
   ```
 
-* **避免不必要的 `.call()` 和 `.apply()`**。
+* **避免不必要的 `.call()` 和 `.apply()`**
 
   eslint: [`no-useless-call`](http://eslint.org/docs/rules/no-useless-call)
 
@@ -1069,7 +1069,7 @@
   sum.call(null, 1, 2, 3)   // ✗ avoid
   ```
 
-* **避免使用不必要的计算值作对象属性**。
+* **避免使用不必要的计算值作对象属性**
 
   eslint: [`no-useless-computed-key`](http://eslint.org/docs/rules/no-useless-computed-key)
 
@@ -1078,7 +1078,7 @@
   const user = { name: 'John Doe' }       // ✓ ok
   ```
 
-* **禁止多余的构造器**。
+* **禁止多余的构造器**
 
   eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
 
@@ -1089,7 +1089,7 @@
   }
   ```
 
-* **禁止不必要的转义**。
+* **禁止不必要的转义**
 
   eslint: [`no-useless-escape`](http://eslint.org/docs/rules/no-useless-escape)
 
@@ -1097,7 +1097,7 @@
   let message = 'Hell\o'  // ✗ avoid
   ```
 
-* **import, export 和解构操作中，禁止赋值到同名变量**。
+* **import, export 和解构操作中，禁止赋值到同名变量**
 
   eslint: [`no-useless-rename`](http://eslint.org/docs/rules/no-useless-rename)
 
@@ -1106,7 +1106,7 @@
   import { config } from './config'               // ✓ ok
   ```
 
-* **属性前面不要加空格**。
+* **属性前面不要加空格**
 
   eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
 
@@ -1115,7 +1115,7 @@
   user.name       // ✓ ok
   ```
 
-* **禁止使用 `with`**。
+* **禁止使用 `with`**
 
   eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
 
@@ -1123,7 +1123,7 @@
   with (val) {...}    // ✗ avoid
   ```
 
-* **对象属性换行时注意统一代码风格**。
+* **对象属性换行时注意统一代码风格**
 
   eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
 
@@ -1142,7 +1142,7 @@
   }                                                                 // ✓ ok
   ```
 
-* **代码块中避免多余留白**。
+* **代码块中避免多余留白**
 
   eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
 
@@ -1158,7 +1158,7 @@
   }
   ```
 
-* **展开运算符与它的表达式间不要留空白**。
+* **展开运算符与它的表达式间不要留空白**
 
   eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
 
@@ -1167,7 +1167,7 @@
   fn(...args)     // ✓ ok
   ```
 
-* **遇到分号时空格要后留前不留**。
+* **遇到分号时空格要后留前不留**
 
   eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
 
@@ -1176,7 +1176,7 @@
   for (let i = 0; i < items.length; i++) {...}    // ✓ ok
   ```
 
-* **代码块首尾留空格**。
+* **代码块首尾留空格**
 
   eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
 
@@ -1185,7 +1185,7 @@
   if (admin) {...}    // ✓ ok
   ```
 
-* **圆括号间不留空格**。
+* **圆括号间不留空格**
 
   eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
 
@@ -1194,7 +1194,7 @@
   getName(name)       // ✓ ok
   ```
 
-* **一元运算符后面跟一个空格**。
+* **一元运算符后面跟一个空格**
 
   eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
 
@@ -1203,7 +1203,7 @@
   typeof !admin        // ✓ ok
   ```
 
-* **注释首尾留空格**。
+* **注释首尾留空格**
 
   eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
 
@@ -1215,7 +1215,7 @@
   /* comment */       // ✓ ok
   ```
 
-* **模板字符串中变量前后不加空格**。
+* **模板字符串中变量前后不加空格**
 
   eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
 
@@ -1224,7 +1224,7 @@
   const message = `Hello, ${name}`      // ✓ ok
   ```
 
-* **检查 `NaN` 的正确姿势是使用 `isNaN()`**。
+* **检查 `NaN` 的正确姿势是使用 `isNaN()`**
 
   eslint: [`use-isnan`](http://eslint.org/docs/rules/use-isnan)
 
@@ -1233,7 +1233,7 @@
   if (isNaN(price)) { }       // ✓ ok
   ```
 
-* **用合法的字符串跟 `typeof` 进行比较操作**。
+* **用合法的字符串跟 `typeof` 进行比较操作**
 
   eslint: [`valid-typeof`](http://eslint.org/docs/rules/valid-typeof)
 
@@ -1242,7 +1242,7 @@
   typeof name === 'undefined'     // ✓ ok
   ```
 
-* **自调用匿名函数 (IIFEs) 使用括号包裹**。
+* **自调用匿名函数 (IIFEs) 使用括号包裹**
 
   eslint: [`wrap-iife`](http://eslint.org/docs/rules/wrap-iife)
 
@@ -1253,7 +1253,7 @@
   const getName = (function () { })()   // ✓ ok
   ```
 
-* **`yield *` 中的 `*` 前后都要有空格**。
+* **`yield *` 中的 `*` 前后都要有空格**
 
   eslint: [`yield-star-spacing`](http://eslint.org/docs/rules/yield-star-spacing)
 
@@ -1262,7 +1262,7 @@
   yield * increment()   // ✓ ok
   ```
 
-* **请书写优雅的条件语句（avoid Yoda conditions）**。
+* **请书写优雅的条件语句（avoid Yoda conditions）**
 
   eslint: [`yoda`](http://eslint.org/docs/rules/yoda)
 
