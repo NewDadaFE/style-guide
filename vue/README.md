@@ -287,3 +287,7 @@ export default {
 
 // methods: Other functions and handlers, and params-needed 'computed'.
 ```
+
+### 参考
+
+* [vuelint-guide](https://github.com/seraphimrose/vuelint-guide)

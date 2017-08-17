@@ -1270,3 +1270,7 @@
   if (42 === age) { }    // ✗ avoid
   if (age === 42) { }    // ✓ ok
   ```
+
+### 参考
+
+* [JavaScript Standard Style](https://standardjs.com/rules-zhcn.html)
