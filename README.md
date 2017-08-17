@@ -16,7 +16,7 @@
   eslint: [`indent`](http://eslint.org/docs/rules/indent)
 
   ```js
-  function hello (name) {
+  function hello(name) {
     console.log('hi', name)
   }
   ```
@@ -354,7 +354,7 @@
   eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
 
   ```js
-  function myFunction () {
+  function myFunction() {
     var result = something()   // ✗ avoid
   }
   ```
@@ -461,8 +461,8 @@
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
 
   ```js
-    function my_function () { }    // ✗ avoid
-    function myFunction () { }     // ✓ ok
+    function my_function() { }    // ✗ avoid
+    function myFunction() { }     // ✓ ok
 
     var my_var = 'hello'           // ✗ avoid
     var myVar = 'hello'            // ✓ ok
@@ -473,10 +473,10 @@
   eslint: [`new-cap`](http://eslint.org/docs/rules/new-cap)
 
   ```js
-  function animal () {}
+  function animal() {}
   var dog = new animal()    // ✗ avoid
 
-  function Animal () {}
+  function Animal() {}
   var dog = new Animal()    // ✓ ok
   ```
 
@@ -485,7 +485,7 @@
   eslint: [`new-parens`](http://eslint.org/docs/rules/new-parens)
 
   ```js
-  function Animal () {}
+  function Animal() {}
   var dog = new Animal    // ✗ avoid
   var dog = new Animal()  // ✓ ok
   ```
@@ -543,13 +543,13 @@
   eslint: [`no-caller`](http://eslint.org/docs/rules/no-caller)
 
   ```js
-  function foo (n) {
+  function foo(n) {
     if (n <= 0) return
 
     arguments.callee(n - 1)   // ✗ avoid
   }
 
-  function foo (n) {
+  function foo(n) {
     if (n <= 0) return
 
     foo(n - 1)
@@ -606,7 +606,7 @@
   eslint: [`no-debugger`](http://eslint.org/docs/rules/no-debugger)
 
   ```js
-  function sum (a, b) {
+  function sum(a, b) {
     debugger      // ✗ avoid
     return a + b
   }
@@ -626,11 +626,11 @@
   eslint: [`no-dupe-args`](http://eslint.org/docs/rules/no-dupe-args)
 
   ```js
-  function sum (a, b, a) {  // ✗ avoid
+  function sum(a, b, a) {  // ✗ avoid
     // ...
   }
 
-  function sum (a, b, c) {  // ✓ ok
+  function sum(a, b, c) {  // ✓ ok
     // ...
   }
   ```
@@ -815,7 +815,7 @@
   eslint: [`no-func-assign`](http://eslint.org/docs/rules/no-func-assign)
 
   ```js
-  function myFunc () { }
+  function myFunc() { }
   myFunc = myOtherFunc    // ✗ avoid
   ```
 
@@ -842,7 +842,7 @@
 
   ```js
   if (authenticated) {
-    function setAuthUser () {}    // ✗ avoid
+    function setAuthUser() {}    // ✗ avoid
   }
   ```
 
@@ -860,7 +860,7 @@
   eslint: [`no-irregular-whitespace`](http://eslint.org/docs/rules/no-irregular-whitespace)
 
   ```js
-  function myFunc () /*<NBSP>*/{}   // ✗ avoid
+  function myFunc() /*<NBSP>*/{}   // ✗ avoid
   ```
 
 * **禁止使用 `__iterator__`**
@@ -877,7 +877,7 @@
 
   ```js
   var score = 100
-  function game () {
+  function game() {
     score: 50         // ✗ avoid
   }
   ```
@@ -898,13 +898,13 @@
   eslint: [`no-lone-blocks`](http://eslint.org/docs/rules/no-lone-blocks)
 
   ```js
-  function myFunc () {
+  function myFunc() {
     {                   // ✗ avoid
       myOtherFunc()
     }
   }
 
-  function myFunc () {
+  function myFunc() {
     myOtherFunc()       // ✓ ok
   }
   ```
@@ -1038,11 +1038,11 @@
   eslint: [`no-return-assign`](http://eslint.org/docs/rules/no-return-assign)
 
   ```js
-  function sum (a, b) {
+  function sum(a, b) {
     return result = a + b     // ✗ avoid
   }
 
-  function sum (a, b) {
+  function sum(a, b) {
     return (result = a + b)   // ✓ ok
   }
   ```
@@ -1152,7 +1152,7 @@
   eslint: [`no-unreachable`](http://eslint.org/docs/rules/no-unreachable)
 
   ```js
-  function doSomething () {
+  function doSomething() {
     return true
     console.log('never called')     // ✗ avoid
   }
