@@ -1,11 +1,13 @@
 # 代码规范
 
 ## 目录
-- [格式规范](#格式规范)
-- [质量规范 React](react/)
-- [质量规范 Vue](vue/)
+- [基础](#基础)
+- [React](react/)
+- [Vue](vue/)
 
-## 格式规范
+## 基础
+
+### 格式
 
 * **使用两个空格**进行缩进
 
@@ -14,25 +16,6 @@
   ```js
   function hello (name) {
     console.log('hi', name)
-  }
-  ```
-
-* 除需要转义的情况外，**字符串统一使用单引号**
-
-  eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
-
-  ```js
-  console.log('hello there')
-  $("<div class='box'>")
-  ```
-
-* **不要定义未使用的变量**
-
-  eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
-
-  ```js
-  function myFunction () {
-    var result = something()   // ✗ avoid
   }
   ```
 
@@ -45,6 +28,15 @@
   if(condition) { ... }    // ✗ avoid
   ```
 
+* **函数调用时标识符与括号间不留空格**
+
+  eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
+
+  ```js
+  console.log ('hello') // ✗ avoid
+  console.log('hello')  // ✓ ok
+  ```
+
 * **命名函数声明时括号与函数名间不加空格**
 
   eslint: [`space-before-function-paren`](http://eslint.org/docs/rules/space-before-function-paren)
@@ -55,21 +47,6 @@
 
   run(function () { ... })      // ✓ ok
   run(function() { ... })       // ✗ avoid
-  ```
-
-* **始终使用** `===` 替代 `==`<br>
-  例外： `obj == null` 可以用来检查 `null || undefined`
-
-  eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
-
-  ```js
-  if (name === 'John')   // ✓ ok
-  if (name == 'John')    // ✗ avoid
-  ```
-
-  ```js
-  if (name !== 'John')   // ✓ ok
-  if (name != 'John')    // ✗ avoid
   ```
 
 * **字符串拼接操作符 (Infix operators)** 之间要留空格
@@ -95,13 +72,182 @@
   ```js
   // ✓ ok
   var list = [1, 2, 3, 4]
-  function greet (name, options) { ... }
+  function greet(name, options) { ... }
   ```
 
   ```js
   // ✗ avoid
   var list = [1,2,3,4]
-  function greet (name,options) { ... }
+  function greet(name,options) { ... }
+  ```
+
+* **单行代码块两边加空格**
+
+  eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
+
+  ```js
+    function foo() {return true}    // ✗ avoid
+    function foo() { return true }  // ✓ ok
+  ```
+
+* **键值对当中冒号与值之间要留空格**
+
+  eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
+
+  ```js
+  var obj = { 'key' : 'value' }    // ✗ avoid
+  var obj = { 'key' :'value' }     // ✗ avoid
+  var obj = { 'key':'value' }      // ✗ avoid
+  var obj = { 'key': 'value' }     // ✓ ok
+  ```
+
+* **行末不留空格**
+
+  eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
+
+
+* **除了缩进，不要使用多个空格**
+
+  eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
+
+  ```js
+  const id =    1234    // ✗ avoid
+  const id = 1234       // ✓ ok
+  ```
+
+* **不要混合使用空格与制表符作为缩进**
+
+  eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
+
+* **不要使用制表符**
+
+  eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
+
+* **属性前面不要加空格**
+
+  eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
+
+  ```js
+  user .name      // ✗ avoid
+  user.name       // ✓ ok
+  ```
+
+* **代码块中避免多余空格**
+
+  eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
+
+  ```js
+  if (user) {
+                              // ✗ avoid
+    const name = getName()
+
+  }
+
+  if (user) {
+    const name = getName()    // ✓ ok
+  }
+  ```
+
+* **展开运算符与它的表达式间不要留空格**
+
+  eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
+
+  ```js
+  fn(... args)    // ✗ avoid
+  fn(...args)     // ✓ ok
+  ```
+
+* **遇到分号时空格要后留前不留**
+
+  eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
+
+  ```js
+  for (let i = 0 ;i < items.length ;i++) {...}    // ✗ avoid
+  for (let i = 0; i < items.length; i++) {...}    // ✓ ok
+  ```
+
+* **代码块首尾留空格**
+
+  eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
+
+  ```js
+  if (admin){...}     // ✗ avoid
+  if (admin) {...}    // ✓ ok
+  ```
+
+* **圆括号间不留空格**
+
+  eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
+
+  ```js
+  getName( name )     // ✗ avoid
+  getName(name)       // ✓ ok
+  ```
+
+* **一元运算符后面跟一个空格**
+
+  eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
+
+  ```js
+  typeof!admin        // ✗ avoid
+  typeof !admin        // ✓ ok
+  ```
+
+* **注释首尾留空格**
+
+  eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
+
+  ```js
+  //comment           // ✗ avoid
+  // comment          // ✓ ok
+
+  /*comment*/         // ✗ avoid
+  /* comment */       // ✓ ok
+  ```
+
+* **模板字符串中变量前后不加空格**
+
+  eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
+
+  ```js
+  const message = `Hello, ${ name }`    // ✗ avoid
+  const message = `Hello, ${name}`      // ✓ ok
+  ```
+
+
+* 除需要转义的情况外，**字符串统一使用单引号**
+
+  eslint: [`quotes`](http://eslint.org/docs/rules/quotes)
+
+  ```js
+  console.log('hello there')
+  $("<div class='box'>")
+  ```
+
+* **必须有行末逗号**
+
+  eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
+
+  ```js
+    var obj = {
+      message: 'hello',   // ✓ ok
+    }
+  ```
+
+* **始终将逗号置于行末**
+
+  eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
+
+  ```js
+    var obj = {
+      foo: 'foo'
+      ,bar: 'bar'   // ✗ avoid
+    }
+
+    var obj = {
+      foo: 'foo',
+      bar: 'bar'   // ✓ ok
+    }
   ```
 
 * **else 关键字要与花括号**保持在同一行
@@ -125,6 +271,105 @@
   else {
     // ...
   }
+  ```
+
+* **不允许有连续多行空行**
+
+  eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
+
+  ```js
+  // ✓ ok
+  var value = 'hello world'
+  console.log(value)
+  ```
+
+  ```js
+  // ✗ avoid
+  var value = 'hello world'
+
+  console.log(value)
+  ```
+
+* **对于三元运算符** `?` 和 `:` 与他们所负责的代码处于同一行
+
+  eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
+
+  ```js
+  // ✓ ok
+  var location = env.development ? 'localhost' : 'www.api.com'
+
+  // ✓ ok
+  var location = env.development
+    ? 'localhost'
+    : 'www.api.com'
+
+  // ✗ avoid
+  var location = env.development ?
+    'localhost' :
+    'www.api.com'
+  ```
+
+* **对象属性换行时注意统一代码风格**
+
+  eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
+
+  ```js
+  const user = {
+    name: 'Jane Doe', age: 30,
+    username: 'jdoe86'            // ✗ avoid
+  }
+
+  const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
+
+  const user = {
+    name: 'Jane Doe',
+    age: 30,
+    username: 'jdoe86'
+  }                                                                 // ✓ ok
+  ```
+
+* **点号操作符须与属性需在同一行**
+
+  eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
+
+  ```js
+    console.
+      log('hello')  // ✗ avoid
+
+    console
+      .log('hello') // ✓ ok
+  ```
+
+* **文件末尾留一空行**
+
+  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
+
+
+### 质量
+
+* **不要定义未使用的变量**
+
+  eslint: [`no-unused-vars`](http://eslint.org/docs/rules/no-unused-vars)
+
+  ```js
+  function myFunction () {
+    var result = something()   // ✗ avoid
+  }
+  ```
+
+* **始终使用** `===` 替代 `==`<br>
+  例外： `obj == null` 可以用来检查 `null || undefined`
+
+  eslint: [`eqeqeq`](http://eslint.org/docs/rules/eqeqeq)
+
+  ```js
+  if (name === 'John')   // ✓ ok
+  if (name == 'John')    // ✗ avoid
+  ```
+
+  ```js
+  if (name !== 'John')   // ✓ ok
+  if (name != 'John')    // ✗ avoid
   ```
 
 * **多行 if 语句的**的括号不能省
@@ -176,42 +421,6 @@
   window.alert('hi')   // ✓ ok
   ```
 
-* **不允许有连续多行空行**
-
-  eslint: [`no-multiple-empty-lines`](http://eslint.org/docs/rules/no-multiple-empty-lines)
-
-  ```js
-  // ✓ ok
-  var value = 'hello world'
-  console.log(value)
-  ```
-
-  ```js
-  // ✗ avoid
-  var value = 'hello world'
-
-  console.log(value)
-  ```
-
-* **对于三元运算符** `?` 和 `:` 与他们所负责的代码处于同一行
-
-  eslint: [`operator-linebreak`](http://eslint.org/docs/rules/operator-linebreak)
-
-  ```js
-  // ✓ ok
-  var location = env.development ? 'localhost' : 'www.api.com'
-
-  // ✓ ok
-  var location = env.development
-    ? 'localhost'
-    : 'www.api.com'
-
-  // ✗ avoid
-  var location = env.development ?
-    'localhost' :
-    'www.api.com'
-  ```
-
 * **每个 var 关键字**单独声明一个变量
 
   eslint: [`one-var`](http://eslint.org/docs/rules/one-var)
@@ -245,15 +454,6 @@
   }
   ```
 
-* **单行代码块两边加空格**
-
-  eslint: [`block-spacing`](http://eslint.org/docs/rules/block-spacing)
-
-  ```js
-    function foo () {return true}    // ✗ avoid
-    function foo () { return true }  // ✓ ok
-  ```
-
 * **对于变量和函数名统一使用驼峰命名法**
 
   eslint: [`camelcase`](http://eslint.org/docs/rules/camelcase)
@@ -264,68 +464,6 @@
 
     var my_var = 'hello'           // ✗ avoid
     var myVar = 'hello'            // ✓ ok
-  ```
-
-* **必须有行末逗号**
-
-  eslint: [`comma-dangle`](http://eslint.org/docs/rules/comma-dangle)
-
-  ```js
-    var obj = {
-      message: 'hello',   // ✓ ok
-    }
-  ```
-
-* **始终将逗号置于行末**
-
-  eslint: [`comma-style`](http://eslint.org/docs/rules/comma-style)
-
-  ```js
-    var obj = {
-      foo: 'foo'
-      ,bar: 'bar'   // ✗ avoid
-    }
-
-    var obj = {
-      foo: 'foo',
-      bar: 'bar'   // ✓ ok
-    }
-  ```
-
-* **点号操作符须与属性需在同一行**
-
-  eslint: [`dot-location`](http://eslint.org/docs/rules/dot-location)
-
-  ```js
-    console.
-      log('hello')  // ✗ avoid
-
-    console
-      .log('hello') // ✓ ok
-  ```
-
-* **文件末尾留一空行**
-
-  elint: [`eol-last`](http://eslint.org/docs/rules/eol-last)
-
-* **函数调用时标识符与括号间不留间隔**
-
-  eslint: [`func-call-spacing`](http://eslint.org/docs/rules/func-call-spacing)
-
-  ```js
-  console.log ('hello') // ✗ avoid
-  console.log('hello')  // ✓ ok
-  ```
-
-* **键值对当中冒号与值之间要留空白**
-
-  eslint: [`key-spacing`](http://eslint.org/docs/rules/key-spacing)
-
-  ```js
-  var obj = { 'key' : 'value' }    // ✗ avoid
-  var obj = { 'key' :'value' }     // ✗ avoid
-  var obj = { 'key':'value' }      // ✗ avoid
-  var obj = { 'key': 'value' }     // ✓ ok
   ```
 
 * **构造函数要以大写字母开头**
@@ -371,7 +509,7 @@
   }
   ```
 
-* **子类的构造器中一定要调用 `super`**
+* **子类的构造函数中一定要调用 `super`**
 
   eslint: [`constructor-super`](http://eslint.org/docs/rules/constructor-super)
 
@@ -389,7 +527,7 @@
   }
   ```
 
-* **使用数组字面量而不是构造器**
+* **使用数组字面量而不是构造函数**
 
   eslint: [`no-array-constructor`](http://eslint.org/docs/rules/no-array-constructor)
 
@@ -706,7 +844,7 @@
   }
   ```
 
-* **不要向 `RegExp` 构造器传入非法的正则表达式**
+* **不要向 `RegExp` 构造函数传入非法的正则表达式**
 
   eslint: [`no-invalid-regexp`](http://eslint.org/docs/rules/no-invalid-regexp)
 
@@ -769,19 +907,6 @@
   }
   ```
 
-* **不要混合使用空格与制表符作为缩进**
-
-  eslint: [`no-mixed-spaces-and-tabs`](http://eslint.org/docs/rules/no-mixed-spaces-and-tabs)
-
-* **除了缩进，不要使用多个空格**
-
-  eslint: [`no-multi-spaces`](http://eslint.org/docs/rules/no-multi-spaces)
-
-  ```js
-  const id =    1234    // ✗ avoid
-  const id = 1234       // ✓ ok
-  ```
-
 * **不要使用多行字符串**
 
   eslint: [`no-multi-str`](http://eslint.org/docs/rules/no-multi-str)
@@ -800,7 +925,7 @@
   const character = new Character()   // ✓ ok
   ```
 
-* **禁止使用 `Function` 构造器**
+* **禁止使用 `Function` 构造函数**
 
   eslint: [`no-new-func`](http://eslint.org/docs/rules/no-new-func)
 
@@ -808,7 +933,7 @@
   var sum = new Function('a', 'b', 'return a + b')    // ✗ avoid
   ```
 
-* **禁止使用 `Object` 构造器**
+* **禁止使用 `Object` 构造函数**
 
   eslint: [`no-new-object`](http://eslint.org/docs/rules/no-new-object)
 
@@ -824,7 +949,7 @@
   const myModule = new require('my-module')    // ✗ avoid
   ```
 
-* **禁止使用 `Symbol` 构造器**
+* **禁止使用 `Symbol` 构造函数**
 
   eslint: [`no-new-symbol`](http://eslint.org/docs/rules/no-new-symbol)
 
@@ -960,10 +1085,6 @@
   let fruits = ['apple',, 'orange']       // ✗ avoid
   ```
 
-* **不要使用制表符**
-
-  eslint: [`no-tabs`](http://eslint.org/docs/rules/no-tabs)
-
 * **正确使用 ES6 中的字符串模板**
 
   eslint: [`no-template-curly-in-string`](http://eslint.org/docs/rules/no-template-curly-in-string)
@@ -994,10 +1115,6 @@
   throw 'error'               // ✗ avoid
   throw new Error('error')    // ✓ ok
   ```
-
-* **行末不留空格**
-
-  eslint: [`no-trailing-spaces`](http://eslint.org/docs/rules/no-trailing-spaces)
 
 * **不要使用 `undefined` 来初始化变量**
 
@@ -1078,7 +1195,7 @@
   const user = { name: 'John Doe' }       // ✓ ok
   ```
 
-* **禁止多余的构造器**
+* **禁止多余的构造函数**
 
   eslint: [`no-useless-constructor`](http://eslint.org/docs/rules/no-useless-constructor)
 
@@ -1106,122 +1223,12 @@
   import { config } from './config'               // ✓ ok
   ```
 
-* **属性前面不要加空格**
-
-  eslint: [`no-whitespace-before-property`](http://eslint.org/docs/rules/no-whitespace-before-property)
-
-  ```js
-  user .name      // ✗ avoid
-  user.name       // ✓ ok
-  ```
-
 * **禁止使用 `with`**
 
   eslint: [`no-with`](http://eslint.org/docs/rules/no-with)
 
   ```js
   with (val) {...}    // ✗ avoid
-  ```
-
-* **对象属性换行时注意统一代码风格**
-
-  eslint: [`object-property-newline`](http://eslint.org/docs/rules/object-property-newline)
-
-  ```js
-  const user = {
-    name: 'Jane Doe', age: 30,
-    username: 'jdoe86'            // ✗ avoid
-  }
-
-  const user = { name: 'Jane Doe', age: 30, username: 'jdoe86' }    // ✓ ok
-
-  const user = {
-    name: 'Jane Doe',
-    age: 30,
-    username: 'jdoe86'
-  }                                                                 // ✓ ok
-  ```
-
-* **代码块中避免多余留白**
-
-  eslint: [`padded-blocks`](http://eslint.org/docs/rules/padded-blocks)
-
-  ```js
-  if (user) {
-                              // ✗ avoid
-    const name = getName()
-
-  }
-
-  if (user) {
-    const name = getName()    // ✓ ok
-  }
-  ```
-
-* **展开运算符与它的表达式间不要留空白**
-
-  eslint: [`rest-spread-spacing`](http://eslint.org/docs/rules/rest-spread-spacing)
-
-  ```js
-  fn(... args)    // ✗ avoid
-  fn(...args)     // ✓ ok
-  ```
-
-* **遇到分号时空格要后留前不留**
-
-  eslint: [`semi-spacing`](http://eslint.org/docs/rules/semi-spacing)
-
-  ```js
-  for (let i = 0 ;i < items.length ;i++) {...}    // ✗ avoid
-  for (let i = 0; i < items.length; i++) {...}    // ✓ ok
-  ```
-
-* **代码块首尾留空格**
-
-  eslint: [`space-before-blocks`](http://eslint.org/docs/rules/space-before-blocks)
-
-  ```js
-  if (admin){...}     // ✗ avoid
-  if (admin) {...}    // ✓ ok
-  ```
-
-* **圆括号间不留空格**
-
-  eslint: [`space-in-parens`](http://eslint.org/docs/rules/space-in-parens)
-
-  ```js
-  getName( name )     // ✗ avoid
-  getName(name)       // ✓ ok
-  ```
-
-* **一元运算符后面跟一个空格**
-
-  eslint: [`space-unary-ops`](http://eslint.org/docs/rules/space-unary-ops)
-
-  ```js
-  typeof!admin        // ✗ avoid
-  typeof !admin        // ✓ ok
-  ```
-
-* **注释首尾留空格**
-
-  eslint: [`spaced-comment`](http://eslint.org/docs/rules/spaced-comment)
-
-  ```js
-  //comment           // ✗ avoid
-  // comment          // ✓ ok
-
-  /*comment*/         // ✗ avoid
-  /* comment */       // ✓ ok
-  ```
-
-* **模板字符串中变量前后不加空格**
-
-  eslint: [`template-curly-spacing`](http://eslint.org/docs/rules/template-curly-spacing)
-
-  ```js
-  const message = `Hello, ${ name }`    // ✗ avoid
-  const message = `Hello, ${name}`      // ✓ ok
   ```
 
 * **检查 `NaN` 的正确姿势是使用 `isNaN()`**
