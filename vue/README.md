@@ -238,18 +238,6 @@ export default {
   destroyed() {},
 }
 
-
-// and you can put some lifecycle hooks before the 'data', because of logical reasons, like:
-export default {
-  mounted() {},
-  // because we are extremely concerned about what the component will do when mounted
-
-  data() {},
-  computed: {},
-
-  destroyed() {},
-}
-
 ```
 
 * **不在模板中引入复杂逻辑 (simple-logic-in -template)**
